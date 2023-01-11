@@ -27,19 +27,5 @@ class Welcome extends CI_Controller {
 		// $this->load->view('footer');
 	}
 
-	public function save(){
-		$this->load->helper('url'); //this is header for including base_url in home view 
-        $this->load->library('session');
-		$name = $this->input->post('name');
-		$this->session->set_userdata('savename',$name);
-		redirect('welcome');
-	}
-
-	public function clear(){
-		$this->load->helper('url'); //this is header for including base_url in home view 
-        $this->load->library('session');
-		$this->session->unset_userdata('savename');
-		redirect('welcome');
-		
-	}
+	
 }
